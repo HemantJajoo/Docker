@@ -1,0 +1,10 @@
+- hosts: localhost
+  tasks: 
+      - docker_container:
+              name: "{{ dname}}"
+              image: "{{ imagename}}"
+              state: started
+              privileged: True
+              tty: True
+              interactive: True
+            
